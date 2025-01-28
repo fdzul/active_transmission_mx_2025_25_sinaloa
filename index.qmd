@@ -1,0 +1,43 @@
+---
+title: "Programa de Prevención & Control del Dengue | 2025"
+format: 
+  dashboard:
+      nav-buttons: [twitter, github, facebook]
+theme: custom.scss
+---
+
+```{r setup}
+library(sf)
+mapview::mapviewOptions(default = TRUE,
+                        basemaps.color.shuffle = FALSE)
+if(as.vector(Sys.info()["sysname"]) == "Darwin"){
+load("/Users/felipedzul/Library/CloudStorage/OneDrive-Personal/proyects/geocoding_mex/2025/8.RData/denmex_2025.RData")
+} else if(as.vector(Sys.info()["sysname"]) == "Windows"){
+   load("D:\\OneDrive\\proyects\\geocoding_mex\\2024\\8.RData\\denmex_2024.RData")
+} else if(as.vector(Sys.info()["sysname"]) == "Linux"){
+    
+}
+library(magrittr)
+```
+
+
+
+# [**Cadenas de Transmisión**]{style="font-size:8pt"}
+
+::: panel-tabset
+
+:::
+
+
+# [**Mapas de Calor**]{style="font-size:8pt"}
+
+::: panel-tabset
+
+:::
+
+
+# [**Log-Gaussian Cox Processes**]{style="font-size:8pt"}
+
+::: panel-tabset
+
+:::
