@@ -11,7 +11,7 @@ library(sf)
 mapview::mapviewOptions(default = TRUE,
                         basemaps.color.shuffle = FALSE)
 if(as.vector(Sys.info()["sysname"]) == "Darwin"){
-load("/Users/felipedzul/Library/CloudStorage/OneDrive-Personal/proyects/geocoding_mex/2025/8.RData/denmex_2025.RData")
+load("~/OneDrive/proyects/geocoding_mex/2025/8.RData/denmex_2025.RData")
 } else if(as.vector(Sys.info()["sysname"]) == "Windows"){
    load("D:\\OneDrive\\proyects\\geocoding_mex\\2024\\8.RData\\denmex_2024.RData")
 } else if(as.vector(Sys.info()["sysname"]) == "Linux"){
@@ -84,6 +84,71 @@ densnv::mp_heatmap(geocoded_datasets = z,
                    static = FALSE,
                    palette = viridis::turbo)
 ```
+
+### [**Los Mochis**]{style="color:#990000"}
+
+```{r heatmap_mochis}
+densnv::mp_heatmap(geocoded_datasets = z,
+                   cve_edo = "25",
+                   locality = "Los Mochis",
+                   status_caso = c(1, 2),
+                   week = c(1:53),
+                   zoom = NULL,
+                   map_type = NULL,
+                   alpha = 0.6,
+                   static = FALSE,
+                   palette = viridis::turbo)
+```
+
+
+### [**Guasave**]{style="color:#990000"}
+
+```{r heatmap_guasave}
+densnv::mp_heatmap(geocoded_datasets = z,
+                   cve_edo = "25",
+                   locality = "Guasave",
+                   status_caso = c(1, 2),
+                   week = c(1:53),
+                   zoom = NULL,
+                   map_type = NULL,
+                   alpha = 0.6,
+                   static = FALSE,
+                   palette = viridis::turbo)
+```
+
+
+### [**Guamuchil**]{style="color:#990000"}
+
+```{r heatmap_guamuchil}
+densnv::mp_heatmap(geocoded_datasets = z,
+                   cve_edo = "25",
+                   locality = "Guamuchil",
+                   status_caso = c(1, 2),
+                   week = c(1:53),
+                   zoom = NULL,
+                   map_type = NULL,
+                   alpha = 0.6,
+                   static = FALSE,
+                   palette = viridis::turbo)
+```
+
+
+### [**Escuinapa**]{style="color:#990000"}
+
+```{r heatmap_escuinapa}
+densnv::mp_heatmap(geocoded_datasets = z,
+                   cve_edo = "25",
+                   locality = "Escuinapa de Hidalgo",
+                   status_caso = c(1, 2),
+                   week = c(1:53),
+                   zoom = NULL,
+                   map_type = NULL,
+                   alpha = 0.6,
+                   static = FALSE,
+                   palette = viridis::turbo)
+```
+
+
 
 :::
 
