@@ -172,16 +172,14 @@ densnv::mp_heatmap(geocoded_datasets = z,
 ### [**Escuinapa**]{style="color:#990000"}
 
 ```{r heatmap_escuinapa}
-
 z <- z |>
     dplyr::filter(accuracy != "locality")
-    
 
 densnv::mp_heatmap(geocoded_datasets = z,
                    cve_edo = "25",
                    locality = "Escuinapa de Hidalgo",
                    status_caso = c(1, 2),
-                   kernel = 2000,
+                   kernel = 1700,
                    week = c(1:53),
                    zoom = NULL,
                    map_type = NULL,
