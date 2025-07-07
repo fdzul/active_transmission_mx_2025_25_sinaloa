@@ -10,13 +10,7 @@ theme: custom.scss
 library(sf)
 mapview::mapviewOptions(default = TRUE,
                         basemaps.color.shuffle = FALSE)
-if(as.vector(Sys.info()["sysname"]) == "Darwin"){
-load("~/OneDrive/proyects/geocoding_mex/2025/8.RData/denmex_2025.RData")
-} else if(as.vector(Sys.info()["sysname"]) == "Windows"){
-   load("D:\\OneDrive\\proyects\\geocoding_mex\\2024\\8.RData\\denmex_2024.RData")
-} else if(as.vector(Sys.info()["sysname"]) == "Linux"){
-    
-}
+load("~/Documents/geocoding_mx/2025/8.RData/denmex_2025.RData")
 library(magrittr)
 ```
 
@@ -69,7 +63,7 @@ z <- z |>
     
 
 
-densnv::mp_heatmap(geocoded_datasets = z,
+densnv::mp_heatmap(geocoded_dataset = z,
                    cve_edo = "25",
                    locality = "Culiacan de Rosales",
                    status_caso = c(1, 2),
@@ -92,7 +86,7 @@ z <- z |>
     dplyr::filter(accuracy != "locality")
     
 
-densnv::mp_heatmap(geocoded_datasets = z,
+densnv::mp_heatmap(geocoded_dataset = z,
                    cve_edo = "25",
                    locality = "Mazatlán",
                    status_caso = c(1, 2),
@@ -113,7 +107,7 @@ z <- z |>
     dplyr::filter(accuracy != "locality")
     
 
-densnv::mp_heatmap(geocoded_datasets = z,
+densnv::mp_heatmap(geocoded_dataset = z,
                    cve_edo = "25",
                    locality = "Los Mochis",
                    status_caso = c(1, 2),
@@ -135,7 +129,7 @@ z <- z |>
     dplyr::filter(accuracy != "locality")
     
 
-densnv::mp_heatmap(geocoded_datasets = z,
+densnv::mp_heatmap(geocoded_dataset = z,
                    cve_edo = "25",
                    locality = "Guasave",
                    status_caso = c(1, 2),
@@ -155,11 +149,11 @@ densnv::mp_heatmap(geocoded_datasets = z,
 z <- z |>
     dplyr::filter(accuracy != "locality")
   
-densnv::mp_heatmap(geocoded_datasets = z,
+densnv::mp_heatmap(geocoded_dataset = z,
                    cve_edo = "25",
                    locality = "Guamuchil",
                    status_caso = c(1, 2),
-                   kernel = 2000,
+                   kernel = 000,
                    week = c(1:53),
                    zoom = NULL,
                    map_type = NULL,
@@ -175,7 +169,7 @@ densnv::mp_heatmap(geocoded_datasets = z,
 z <- z |>
     dplyr::filter(accuracy != "locality")
 
-densnv::mp_heatmap(geocoded_datasets = z,
+densnv::mp_heatmap(geocoded_dataset = z,
                    cve_edo = "25",
                    locality = "Escuinapa de Hidalgo",
                    status_caso = c(1, 2),
