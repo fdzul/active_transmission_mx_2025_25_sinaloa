@@ -6,11 +6,17 @@ format:
 theme: custom.scss
 ---
 
-```{r setup_sinaloa}
+```{r setup_25_sinaloa}
 library(sf)
 mapview::mapviewOptions(default = TRUE,
                         basemaps.color.shuffle = FALSE)
-load("~/Documents/geocoding_mx/2025/8.RData/denmex_2025.RData")
+if(as.vector(Sys.info()["sysname"]) == "Darwin"){
+load("/Users/fdzul/Documents/geocoding_mx/2025/8.RData/denmex_2025.RData")
+} else if(as.vector(Sys.info()["sysname"]) == "Windows"){
+   load("D:\\OneDrive\\proyects\\geocoding_mex\\2024\\8.RData\\denmex_2024.RData")
+} else if(as.vector(Sys.info()["sysname"]) == "Linux"){
+    load("/home/fdzul/Documents/active_transmission/geocoding_mx/8.RData/denmex_2025.RData")
+}
 library(magrittr)
 ```
 
